@@ -20,7 +20,7 @@ This Terraform module currently tested on using below provider versions:
 
 # Variables 
 
-Before using the terraform script, the user is required to edit `variables.tf` and provide necessary AWS spesific parameter
+Before using the terraform script, the user is required to edit `variables.tf` and provide necessary AWS spesific parameter.
 Such as,
 * AWS Region where the EC2 will be deployed
 * Availability Zone (AZ) for VPC
@@ -29,10 +29,10 @@ Such as,
 * Prefix -> unique identifier that will be appended in the object name creation, can put any values such as name or ID
 * AWS PEM Key Name to enable SSH into the EC2 Instance
 
-For the threatstack agent to join the console, user need to input ___--deploy-key___ parameter on `nginx.sh` file
+For the threatstack agent to join the console, user need to input ___--deploy-key___ parameter on `nginx.sh` file.
 The ___--deploy-key___ can get from the threatstack dashboard as shown below,
 
-(LINK)
+![Threatstack output](https://github.com/martul89/f5-threatstack-ubuntu-AWS/blob/main/doc/threatstack-addserver.jpg "Threatstack output")
 
 # Usage
 
@@ -42,6 +42,5 @@ After editing variables, to use the code,
 * `terraform plan` 
 * `terraform apply --auto-approve` 
 
-When the script is successful, the user will get output similar to below,
-To_SSH_into_the_ubuntu
-ssh -i name_key.pem ubuntu@PUBLIC_IP
+When the script is successful, the user will get output similar to below.
+To_SSH_into_the_ubuntu ssh -i name_key.pem ubuntu@PUBLIC_IP
