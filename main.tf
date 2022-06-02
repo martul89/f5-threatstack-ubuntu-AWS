@@ -27,7 +27,7 @@ resource "aws_instance" "nginx" {
   subnet_id              = module.vpc.public_subnets[0]
   user_data              = file("nginx.sh")
   vpc_security_group_ids = [aws_security_group.nginx.id]
-  key_name               = var.key_name
+  key_name               = aws_key_pair.demo.key_name
   tags = {
     Name = "${var.prefix}-nginx"
     Env  = "f5"
