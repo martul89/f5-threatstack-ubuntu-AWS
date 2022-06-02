@@ -36,12 +36,13 @@ variable "prefix" {
   default     = "fwinata_testing"
 }
 
+/* 3rd June update : Not required anymore the script will create the PEm keys also
 # Please assign AWS keypair so that you can have access to the EC2 later
 variable "key_name" {
   description = "PEM key to ssh later"
   default     = "fwinata-key-example"
 }
-
+*/
 
 #This is the private IP addresses of the servers, the first will get the ip address 10.0.0.172 (example only)
 variable "private_ip_nginx" {
